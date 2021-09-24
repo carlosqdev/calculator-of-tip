@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Bill from "./Bill/Bill";
 import TipPercentage from "./TipPercentage/TipPercentage";
 import NumberOfPeople from "./NumberOfPeople/NumberOfPeople";
@@ -15,8 +15,17 @@ function App() {
   const [tipAmount, setTipAmount] = useState(0);
   const [total, setTotal] = useState(0);
 
-  console.log(`Esto vale numero de personas: ${numberOfPeople}`);
+  useEffect(() => {
+    if (bill > 0 && percentage > 0) {
+      setTotal((parseFloat(percentage) * parseFloat(bill)) / 100);
+    }
 
+    if (numberOfPeople > 0 && total > 0) {
+      setTipAmount(parseFloat(total) / parseFloat(numberOfPeople));
+    }
+  }, [percentage, bill, total, numberOfPeople]);
+
+  console.log(tipAmount);
   return (
     <>
       <AppContext.Provider
