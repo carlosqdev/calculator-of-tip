@@ -4,6 +4,7 @@ import TipPercentage from "./TipPercentage/TipPercentage";
 import NumberOfPeople from "./NumberOfPeople/NumberOfPeople";
 import TipAmount from "./TipAmount/TipAmount";
 import Total from "./Total/Total";
+import ButtonReset from "./ButtonReset/ButtonReset";
 import { DataTip } from "./data";
 
 export const AppContext = React.createContext();
@@ -25,7 +26,6 @@ function App() {
     }
   }, [percentage, bill, total, numberOfPeople]);
 
-  console.log(tipAmount);
   return (
     <>
       <AppContext.Provider
@@ -54,6 +54,7 @@ function App() {
         <NumberOfPeople />
         <TipAmount />
         <Total />
+        <ButtonReset />
       </AppContext.Provider>
     </>
   );
