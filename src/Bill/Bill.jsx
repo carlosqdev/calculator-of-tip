@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../App";
 
-function Bill() {
+function Bill(props) {
+  const context = useContext(AppContext);
   return (
     <>
       <h1>Bill</h1>
-      <input type="text" name="bill" id="bill" />
+      <input value={context.bill} onChange={(event) => {context.setBill(event.target.value)}} type="number" name="bill" id="bill" />
     </>
   );
 }

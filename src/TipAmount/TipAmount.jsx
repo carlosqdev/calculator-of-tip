@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../App";
 
 function TipAmount() {
-  return (
-    <h2>Tip Amount $0.00</h2>
-  )
+  const context = useContext(AppContext);
+
+  return <h2>Tip Amount $ {context.tipAmount}</h2>;
 }
 
 export default TipAmount;
