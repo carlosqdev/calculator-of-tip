@@ -6,6 +6,7 @@ import TipAmount from "./TipAmount/TipAmount";
 import Total from "./Total/Total";
 import ButtonReset from "./ButtonReset/ButtonReset";
 import { DataTip } from "./data";
+import './App.css';
 
 export const AppContext = React.createContext();
 
