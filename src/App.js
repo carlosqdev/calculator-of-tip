@@ -6,7 +6,8 @@ import TipAmount from "./TipAmount/TipAmount";
 import Total from "./Total/Total";
 import ButtonReset from "./ButtonReset/ButtonReset";
 import { DataTip } from "./data";
-import './App.css';
+import logo from './img/logo.svg';
+import "./App.css";
 
 export const AppContext = React.createContext();
 
@@ -29,34 +30,37 @@ function App() {
 
   return (
     <>
-      <AppContext.Provider
-        value={{
-          bill,
-          percentage,
-          numberOfPeople,
-          tipAmount,
-          total,
-          setBill,
-          setPercentage,
-          setNumberOfPeople,
-          setTipAmount,
-          setTotal,
-        }}
-      >
-        <Bill />
-        <section>
-          {DataTip.map((item) => (
-            <TipPercentage
-              key={item.id.toString()}
-              percentage={item.percentage}
-            />
-          ))}
-        </section>
-        <NumberOfPeople />
-        <TipAmount />
-        <Total />
-        <ButtonReset />
-      </AppContext.Provider>
+      <img className="img__logo" loading="lazy" width="25%" height="auto" src={logo} alt="Foto de logotipo" />
+      <section className="calculator">
+        <AppContext.Provider
+          value={{
+            bill,
+            percentage,
+            numberOfPeople,
+            tipAmount,
+            total,
+            setBill,
+            setPercentage,
+            setNumberOfPeople,
+            setTipAmount,
+            setTotal,
+          }}
+        >
+          <Bill />
+          <section>
+            {DataTip.map((item) => (
+              <TipPercentage
+                key={item.id.toString()}
+                percentage={item.percentage}
+              />
+            ))}
+          </section>
+          <NumberOfPeople />
+          <TipAmount />
+          <Total />
+          <ButtonReset />
+        </AppContext.Provider>
+      </section>
     </>
   );
 }
