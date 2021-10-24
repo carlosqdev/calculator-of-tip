@@ -1,0 +1,13 @@
+.button__tip {
+  width: 8.4rem;
+  height: 3.1rem;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
+}
+.button__tip:active {
+  background-color: var(--cyan)
+}

@@ -2,15 +2,11 @@
 
 :root {
   /* Colors primary */
-  --strong_cyan: hsl(172, 67%, 45%);
-
-  /* Colors neutral */
-  --very_dark_cyan: hsl(183, 100%, 15%);
-  --dark_grayish_cyan: hsl(186, 14%, 43%);
-  --dark_grayish_cyan_two: hsl(184, 14%, 56%);
-  --light_grayish_cyan: hsl(185, 41%, 84%);
-  --light_grayish_cyan_two: hsl(189, 41%, 97%);
-  --white: hsl(0, 0%, 100%);
+  --cyan: #26C3AC;
+  --bg_color: #C5E5E6;
+  --white: #FFFEFE;
+  --gray: #F2F8FA;
+  --green: #00464A;
 
   /* Fonts */
   --font-family: 'Space Mono', monospace;
@@ -25,7 +21,7 @@
 body {
   font-family: var(--font-family);
   font-size: 16px;
-  background-color: var(--light_grayish_cyan);
+  background-color: var(--bg_color);
 }
 
 .container__root {

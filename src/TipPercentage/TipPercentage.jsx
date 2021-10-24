@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AppContext } from "../App";
+import './TipPercentage.css';
 
 function TipPercentage({ percentage }) {
   const [showCustomPercentage, setShowCustomPercentage] = useState(false);
@@ -23,12 +24,12 @@ function TipPercentage({ percentage }) {
           placeholder="Custom"
         />
       ) : (
-        <button
+        <button className="button__tip"
           onClick={() => {
             context.setPercentage(percentage);
           }}
         >
-          {percentage}
+          {percentage}%
         </button>
       )}
     </>

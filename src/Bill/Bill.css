@@ -1,0 +1,30 @@
+.bill__amount {
+  display: grid;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+.bill__label {
+  color: var(--green);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.bill__input {
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: right;
+  padding: 0.5rem;
+  width: 280px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--gray);
+  background-image: url("../img/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position-x: 20px;
+  background-position-y: center;
+  color: var(--green);
+  outline: none;
+}
+.bill__input:focus {
+  border: 1.5px solid var(--cyan);
+}

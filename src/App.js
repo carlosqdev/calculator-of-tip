@@ -47,7 +47,8 @@ function App() {
           }}
         >
           <Bill />
-          <section>
+          <label className="select__label">Select Tip %</label>
+          <section className="select__tip">
             {DataTip.map((item) => (
               <TipPercentage
                 key={item.id.toString()}
