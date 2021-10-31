@@ -3,18 +3,14 @@
   gap: 5px;
   margin-bottom: 1rem;
 }
-.bill__label {
-  color: var(--green);
-  font-size: 1rem;
-  font-weight: 700;
-}
 .bill__input {
   font-family: var(--font-family);
   font-size: 1.3rem;
   font-weight: 700;
   text-align: right;
   padding: 0.5rem;
-  width: 280px;
+  max-width: 500px;
+  width: 100%;
   border: none;
   border-radius: 5px;
   background-color: var(--gray);
@@ -27,4 +23,5 @@
 }
 .bill__input:focus {
   border: 1.5px solid var(--cyan);
+  transition: border 0.3s ease-in-out;
 }

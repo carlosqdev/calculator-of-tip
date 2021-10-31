@@ -47,7 +47,7 @@ function App() {
           }}
         >
           <Bill />
-          <label className="select__label">Select Tip %</label>
+          <label className="label">Select Tip %</label>
           <section className="select__tip">
             {DataTip.map((item) => (
               <TipPercentage
@@ -57,9 +57,13 @@ function App() {
             ))}
           </section>
           <NumberOfPeople />
-          <TipAmount />
-          <Total />
-          <ButtonReset />
+          <section className="totals__wrapper">
+            <div>
+              <TipAmount />
+              <Total />
+            </div>
+            <ButtonReset />
+          </section>
         </AppContext.Provider>
       </section>
     </>

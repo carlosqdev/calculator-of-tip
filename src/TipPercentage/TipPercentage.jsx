@@ -14,7 +14,7 @@ function TipPercentage({ percentage }) {
   return (
     <>
       {showCustomPercentage ? (
-        <input
+        <input className="tip__input"
           onChange={(event) => {
             context.setPercentage(event.target.value);
           }}
@@ -24,7 +24,7 @@ function TipPercentage({ percentage }) {
           placeholder="Custom"
         />
       ) : (
-        <button className="button__tip"
+        <button className="tip__button"
           onClick={() => {
             context.setPercentage(percentage);
           }}

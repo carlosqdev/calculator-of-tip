@@ -1,0 +1,10 @@
+.tipAmount__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tipAmount__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

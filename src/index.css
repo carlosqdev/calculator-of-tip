@@ -6,7 +6,9 @@
   --bg_color: #C5E5E6;
   --white: #FFFEFE;
   --gray: #F2F8FA;
+  --gray_full: #808080;
   --green: #00464A;
+  --orange: #da4f21;
 
   /* Fonts */
   --font-family: 'Space Mono', monospace;
@@ -24,8 +26,51 @@ body {
   background-color: var(--bg_color);
 }
 
+/* Global css */
 .container__root {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.label {
+  color: var(--green);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.label__warning {
+  color: var(--orange);
+}
+.label__white {
+  color: var(--white);
+  font-weight: 400;
+}
+.label__cyan {
+  color: var(--cyan);
+  font-size: 1.4rem;
+}
+.label__gray {
+  color: var(--gray_full);
+  font-weight: 400;
+}
+.button {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: var(--cyan);
+  color: var(--green);
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  outline: none;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--gray);
+  transition: 0.5s ease-in-out;
+}
+.button:active {
+  transform: scale(.9);
+}
+.hide {
+  display: none;
 }

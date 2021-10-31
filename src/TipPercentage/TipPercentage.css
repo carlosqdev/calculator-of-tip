@@ -1,5 +1,6 @@
-.button__tip {
-  width: 8.4rem;
+.tip__button {
+  max-width: 180px;
+  width: 47%;
   height: 3.1rem;
   background-color: var(--green);
   color: var(--white);
@@ -8,6 +9,27 @@
   outline: none;
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15);
 }
-.button__tip:active {
-  background-color: var(--cyan)
+.tip__button:active {
+  transform: scale(.9);
+  background-color: var(--cyan);
+}
+.tip__input {
+  font-family: var(--font-family);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5rem;
+  max-width: 180px;
+  width: 47%;
+  height: 3.1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--gray);
+  color: var(--green);
+  outline: none;
+}
+.tip__input:focus {
+  border: 1.5px solid var(--cyan);
+  text-align: right;
+  transition: 0.3s ease-in-out;
 }

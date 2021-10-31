@@ -1,12 +1,19 @@
 import React, { useContext } from "react";
 import { AppContext } from "../App";
+import "./Total.css";
 
 function Total() {
-  const context = useContext(AppContext);
+  const { total } = useContext(AppContext);
 
   return (
-    <h2>Total ${context.total}</h2>
-  )
+    <section className="total__container">
+      <div className="total__wrapper">
+        <label className="label label__white">Tip Amount</label>
+        <label className="label label__gray">/ person</label>
+      </div>
+      <span className="label label__cyan">${total}</span>
+    </section>
+  );
 }
 
 export default Total;

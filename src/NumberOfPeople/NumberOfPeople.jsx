@@ -1,22 +1,27 @@
 import React, { useContext } from "react";
+import "./NumberOfPeople.css";
+
 import { AppContext } from "../App";
 
 function NumberOfPeople() {
-  const context = useContext(AppContext);
+  const { numberOfPeople, setNumberOfPeople } = useContext(AppContext);
 
   return (
-    <>
-      <h2>Number of People</h2>
+    <section className="people__wrapper">
+      <label className="label grid__title">Number of People</label>
+      <label
+        className={numberOfPeople <= 0 ? "label label__warning grid__warning" : "hide"}>
+        Can't be zero
+      </label>
       <input
-        value={context.numberOfPeople}
-        onChange={(event) => {
-          context.setNumberOfPeople(event.target.value);
-        }}
+        className={numberOfPeople <= 0 ? "input input__warning" : "input"}
+        value={numberOfPeople}
+        onChange={(event) => setNumberOfPeople(event.target.value)}
         type="number"
         name="numberPeople"
         id="numberPeople"
       />
-    </>
+    </section>
   );
 }
 

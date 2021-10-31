@@ -2,17 +2,23 @@ import React, { useContext } from "react";
 import { AppContext } from "../App";
 
 function ButtonReset() {
-  const context = useContext(AppContext);
+  const {
+    setBill,
+    setPercentage,
+    setNumberOfPeople,
+    setTipAmount,
+    setTotal
+  } = useContext(AppContext);
 
-  const resetCalculator = () => {
-    context.setBill(0);
-    context.setPercentage(0);
-    context.setNumberOfPeople(0);
-    context.setTipAmount(0);
-    context.setTotal(0);
-  };
+  function resetCalculator() {
+    setBill(0);
+    setPercentage(0);
+    setNumberOfPeople(0);
+    setTipAmount(0);
+    setTotal(0);
+  }
 
-  return <button onClick={resetCalculator}>Reset</button>;
+  return <button className="button" onClick={resetCalculator}>RESET</button>;
 }
 
 export default ButtonReset;
