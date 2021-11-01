@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/calculator-of-tip/static/css/main.9bf53f59.chunk.css",
+    "main.js": "/calculator-of-tip/static/js/main.5aa40a72.chunk.js",
+    "main.js.map": "/calculator-of-tip/static/js/main.5aa40a72.chunk.js.map",
+    "runtime-main.js": "/calculator-of-tip/static/js/runtime-main.f8a5f93f.js",
+    "runtime-main.js.map": "/calculator-of-tip/static/js/runtime-main.f8a5f93f.js.map",
+    "static/js/2.7f4dabab.chunk.js": "/calculator-of-tip/static/js/2.7f4dabab.chunk.js",
+    "static/js/2.7f4dabab.chunk.js.map": "/calculator-of-tip/static/js/2.7f4dabab.chunk.js.map",
+    "static/js/3.f501963e.chunk.js": "/calculator-of-tip/static/js/3.f501963e.chunk.js",
+    "static/js/3.f501963e.chunk.js.map": "/calculator-of-tip/static/js/3.f501963e.chunk.js.map",
+    "index.html": "/calculator-of-tip/index.html",
+    "static/css/main.9bf53f59.chunk.css.map": "/calculator-of-tip/static/css/main.9bf53f59.chunk.css.map",
+    "static/js/2.7f4dabab.chunk.js.LICENSE.txt": "/calculator-of-tip/static/js/2.7f4dabab.chunk.js.LICENSE.txt",
+    "static/media/Bill.css": "/calculator-of-tip/static/media/icon-dollar.9f9be353.svg",
+    "static/media/NumberOfPeople.css": "/calculator-of-tip/static/media/icon-person.65bfd204.svg",
+    "static/media/logo.3cc0528b.svg": "/calculator-of-tip/static/media/logo.3cc0528b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f8a5f93f.js",
+    "static/js/2.7f4dabab.chunk.js",
+    "static/css/main.9bf53f59.chunk.css",
+    "static/js/main.5aa40a72.chunk.js"
+  ]
+}
