@@ -1,8 +1,8 @@
 # Calculator of tip. ![Licence_badge](https://img.shields.io/github/license/carlosqdev/react-pricing-component?style=for-the-badge)
 
-Calculator of tip es una aplicación para calcular la cantidad de propina que te corresponde pagar, ingresas el momento de tu factura y luego seleccionas el porcentaje de propinas que deseas pagar, ingresas la cantidad de personas con las que deseas dividir la cuenta y la aplicación te calcula cuanto deben aportar por persona y cuanto es el total a pagar en concepto de propina.
+Calculator of tip es una aplicación para calcular la cantidad de propina que te corresponde pagar, ingresas el monto de tu factura y luego seleccionas el porcentaje de propina que deseas pagar, ingresas la cantidad de personas con las que deseas dividir la cuenta y la aplicación te calcula cuanto deben aportar por persona y cuanto es el total a pagar en concepto de propina.
 
-![demo](https://github.com/carlosqdev/sign-up-reactjs/blob/main/Thumbail-sign-up-reactjs.png?raw=true)
+![demo](https://github.com/carlosqdev/calculator-of-tip/blob/main/Preview.png?raw=true)
 
 ## 💿 [Ver demostración](https://carlosqdev.github.io/calculator-of-tip)
 
