@@ -8,7 +8,7 @@ function Total() {
   return (
     <section className="total__container">
       <div className="total__wrapper">
-        <label className="label label__white">Tip Amount</label>
+        <label className="label label__white">Total</label>
         <label className="label label__gray">/ person</label>
       </div>
       <span className="label label__cyan">${total}</span>

@@ -53,6 +53,7 @@ body {
   font-weight: 400;
 }
 .button {
+  height: 3.1rem;
   margin-top: 1.2rem;
   font-size: 1.1rem;
   font-weight: 700;
@@ -73,4 +74,17 @@ body {
 }
 .hide {
   display: none;
+}
+@media screen and (min-width: 1024px) {
+  .container__root {
+    height: 100vh;
+    justify-content: center;
+  }
+  .label {
+    font-size: 0.9rem;
+  }
+  .label__cyan {
+    color: var(--cyan);
+    font-size: 1.9rem;
+  }
 }

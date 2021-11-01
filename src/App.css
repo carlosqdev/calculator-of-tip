@@ -2,27 +2,54 @@
   margin: 2rem 0;
 }
 .calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   max-width: 1000px;
   width: 100%;
   background-color: var(--white);
-  border-radius: 20px 20px 0 0;
-  box-shadow: 0px 1px 0px .8px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  box-shadow: 0px 1px 0px 0.8px rgba(0, 0, 0, 0.15);
   padding: 1rem;
 }
 .select__tip {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 6px;
   justify-content: space-between;
   padding: 1rem 0px;
 }
 .totals__wrapper {
   display: grid;
   grid-auto-flow: row;
+  align-content: space-between;
   gap: 10px;
   margin-top: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   background-color: var(--green);
   border-radius: 10px;
 }
+@media screen and (min-width: 500px) {
+  .img__logo {
+    width: 15%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calculator {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .totals__wrapper {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .calculator {
+    max-width: 700px;
+  }
+  .img__logo {
+    width: 5%;
+  }
+}
+

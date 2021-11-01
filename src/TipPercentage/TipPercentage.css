@@ -33,3 +33,14 @@
   text-align: right;
   transition: 0.3s ease-in-out;
 }
+@media screen and (min-width: 1024px) {
+  .tip__button {
+    width: 30%;
+    height: 2.5rem;
+  }
+  .tip__input {
+    width: 30%;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
