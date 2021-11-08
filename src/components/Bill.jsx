@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../App";
-import './Bill.css';
+import '../styles/components/Bill.css';
 
 function Bill(props) {
   const context = useContext(AppContext);

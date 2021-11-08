@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AppContext } from "../App";
-import './TipPercentage.css';
+import '../styles/components/TipPercentage.css';
 
 function TipPercentage({ percentage }) {
   const [showCustomPercentage, setShowCustomPercentage] = useState(false);

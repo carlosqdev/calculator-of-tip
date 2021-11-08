@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./NumberOfPeople.css";
+import "../styles/components/NumberOfPeople.css";
 
 import { AppContext } from "../App";
 

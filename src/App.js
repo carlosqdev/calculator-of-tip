@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import Bill from "./Bill/Bill";
-import TipPercentage from "./TipPercentage/TipPercentage";
-import NumberOfPeople from "./NumberOfPeople/NumberOfPeople";
-import TipAmount from "./TipAmount/TipAmount";
-import Total from "./Total/Total";
-import ButtonReset from "./ButtonReset/ButtonReset";
+import Bill from "./components/Bill";
+import TipPercentage from "./components/TipPercentage";
+import NumberOfPeople from "./components/NumberOfPeople";
+import TipAmount from "./components/TipAmount";
+import Total from "./components/Total";
+import ButtonReset from "./components/ButtonReset";
 
 import { DataTip } from "./data";
-import logo from "./img/logo.svg";
-import "./App.css";
+import logo from "./assets/logo.svg";
+import "./styles/App.css";
 
 export const AppContext = React.createContext();
 

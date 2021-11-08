@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../App";
-import "./Total.css";
+import "../styles/components/Total.css";
 
 function Total() {
   const { total } = useContext(AppContext);

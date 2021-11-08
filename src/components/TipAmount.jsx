@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../App";
-import './TipAmount.css';
+import '../styles/components/TipAmount.css';
 
 function TipAmount() {
   const {tipAmount} = useContext(AppContext);
