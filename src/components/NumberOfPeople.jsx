@@ -12,7 +12,7 @@ function NumberOfPeople() {
 
   return (
     <section className="people__wrapper">
-      <label className="label grid__title">Number of People</label>
+      <label htmlFor="numberPeople" className="label grid__title">Number of People</label>
       <label
         className={numberOfPeople <= 0 ? "label label__warning grid__warning" : "hide"}>
         Can't be zero

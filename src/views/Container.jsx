@@ -23,7 +23,7 @@ function Container() {
       <section className="calculator">
         <section>
           <Bill />
-          <label className="label">Select Tip %</label>
+          <label htmlFor="custom" className="label">Select Tip %</label>
           <section className="select__tip">
             {DataTip?.map((item) => (
               <TipPercentage

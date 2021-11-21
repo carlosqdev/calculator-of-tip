@@ -18,6 +18,7 @@ function Bill(props) {
         value={bill}
         type="number"
         name="bill"
+        id="bill"
       />
     </section>
   );
