@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { AppContext } from "../App";
+import GlobalContext from "../context/index";
 import '../styles/components/TipAmount.css';
 
 function TipAmount() {
-  const {tipAmount} = useContext(AppContext);
+  const { tipAmount } = useContext(GlobalContext);
 
   return (
     <section className="tipAmount__container">
@@ -12,7 +12,7 @@ function TipAmount() {
         <label className="label label__gray">/ person</label>
       </div>
       <span className="label label__cyan">
-        ${tipAmount}
+        ${tipAmount.toFixed(2)}
       </span>
     </section>
   );
