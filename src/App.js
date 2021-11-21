@@ -1,82 +1,12 @@
-import React, { useState, useEffect } from "react";
-import Bill from "./components/Bill";
-import TipPercentage from "./components/TipPercentage";
-import NumberOfPeople from "./components/NumberOfPeople";
-import TipAmount from "./components/TipAmount";
-import Total from "./components/Total";
-import ButtonReset from "./components/ButtonReset";
-
-import { DataTip } from "./data";
-import logo from "./assets/logo.svg";
 import "./styles/App.css";
-
-export const AppContext = React.createContext();
+import GlobalProvider from "./context/Provider";
+import Container from "./views/Container";
 
 function App() {
-  const [bill, setBill] = useState(0);
-  const [percentage, setPercentage] = useState(0);
-  const [numberOfPeople, setNumberOfPeople] = useState(0);
-  const [tipAmount, setTipAmount] = useState(0);
-  const [total, setTotal] = useState(0);
-
-  useEffect(() => {
-    if (bill > 0 && percentage > 0) {
-      setTotal((parseFloat(percentage) * parseFloat(bill)) / 100);
-    }
-
-    if (numberOfPeople > 0 && total > 0) {
-      setTipAmount(parseFloat(total) / parseFloat(numberOfPeople));
-    }
-  }, [percentage, bill, total, numberOfPeople]);
-
   return (
-    <>
-      <img
-        className="img__logo"
-        loading="lazy"
-        width="25%"
-        height="auto"
-        src={logo}
-        alt="Foto de logotipo"
-      />
-      <section className="calculator">
-        <AppContext.Provider
-          value={{
-            bill,
-            percentage,
-            numberOfPeople,
-            tipAmount,
-            total,
-            setBill,
-            setPercentage,
-            setNumberOfPeople,
-            setTipAmount,
-            setTotal,
-          }}
-        >
-          <section>
-            <Bill />
-            <label className="label">Select Tip %</label>
-            <section className="select__tip">
-              {DataTip.map((item) => (
-                <TipPercentage
-                  key={item.id.toString()}
-                  percentage={item.percentage}
-                />
-              ))}
-            </section>
-            <NumberOfPeople />
-          </section>
-          <section className="totals__wrapper">
-            <div>
-              <TipAmount />
-              <Total />
-            </div>
-            <ButtonReset />
-          </section>
-        </AppContext.Provider>
-      </section>
-    </>
+    <GlobalProvider>
+      <Container />
+    </GlobalProvider>
   );
 }
 

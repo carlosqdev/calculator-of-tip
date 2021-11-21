@@ -1,10 +1,14 @@
 import React, { useContext } from "react";
 import "../styles/components/NumberOfPeople.css";
 
-import { AppContext } from "../App";
+import GlobalContext  from "../context/index";
 
 function NumberOfPeople() {
-  const { numberOfPeople, setNumberOfPeople } = useContext(AppContext);
+  const { numberOfPeople, setNumberOfPeople } = useContext(GlobalContext);
+
+  function handleChange(e) {
+    setNumberOfPeople(e.target.value)
+  }
 
   return (
     <section className="people__wrapper">
@@ -14,9 +18,9 @@ function NumberOfPeople() {
         Can't be zero
       </label>
       <input
+        onChange={(e) => handleChange(e)}
         className={numberOfPeople <= 0 ? "input input__warning" : "input"}
         value={numberOfPeople}
-        onChange={(event) => setNumberOfPeople(event.target.value)}
         type="number"
         name="numberPeople"
         id="numberPeople"

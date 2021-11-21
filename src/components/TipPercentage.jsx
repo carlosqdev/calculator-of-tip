@@ -1,23 +1,30 @@
 import React, { useState, useContext, useEffect } from "react";
-import { AppContext } from "../App";
+import GlobalContext from "../context/index";
 import '../styles/components/TipPercentage.css';
 
-function TipPercentage({ percentage }) {
+function TipPercentage({ valuePercentage }) {
   const [showCustomPercentage, setShowCustomPercentage] = useState(false);
 
-  const context = useContext(AppContext);
+  const {percentage, setPercentage} = useContext(GlobalContext);
+
+  function handleChange(e) {
+    setPercentage(e.target.value);
+  }
+
+  function handleClick() {
+    setPercentage(valuePercentage);
+  }
 
   useEffect(() => {
-    if (percentage === "Custom") setShowCustomPercentage(true);
-  }, [percentage]);
+    if (valuePercentage === "Custom") setShowCustomPercentage(true);
+  }, [valuePercentage]);
 
   return (
     <>
       {showCustomPercentage ? (
         <input className="tip__input"
-          onChange={(event) => {
-            context.setPercentage(event.target.value);
-          }}
+          onChange={(e) => handleChange(e)}
+          value={percentage}
           type="number"
           name="custom"
           id="custom"
@@ -25,11 +32,9 @@ function TipPercentage({ percentage }) {
         />
       ) : (
         <button className="tip__button"
-          onClick={() => {
-            context.setPercentage(percentage);
-          }}
+          onClick={() => handleClick()}
         >
-          {percentage}%
+          {valuePercentage}%
         </button>
       )}
     </>

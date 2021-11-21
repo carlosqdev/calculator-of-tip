@@ -1,13 +1,24 @@
 import React, { useContext } from "react";
-import { AppContext } from "../App";
+import GlobalContext from "../context/index";
 import '../styles/components/Bill.css';
 
 function Bill(props) {
-  const context = useContext(AppContext);
+  const {bill, setBill } = useContext(GlobalContext);
+
+  function handleChange(e) {
+    setBill(e.target.value);
+  }
+
   return (
     <section className="bill__amount">
       <label className="label" htmlFor="bill">Bill</label>
-      <input className="bill__input" value={context.bill} onChange={(event) => {context.setBill(event.target.value)}} type="number" name="bill" id="bill" />
+      <input
+        onChange={(e) => handleChange(e)}
+        className="bill__input"
+        value={bill}
+        type="number"
+        name="bill"
+      />
     </section>
   );
 }

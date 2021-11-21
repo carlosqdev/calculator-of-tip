@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { AppContext } from "../App";
+import GlobalContext from "../context/index";
 import "../styles/components/Total.css";
 
 function Total() {
-  const { total } = useContext(AppContext);
+  const { total } = useContext(GlobalContext);
 
   return (
     <section className="total__container">
@@ -11,7 +11,7 @@ function Total() {
         <label className="label label__white">Total</label>
         <label className="label label__gray">/ person</label>
       </div>
-      <span className="label label__cyan">${total}</span>
+      <span className="label label__cyan">${total.toFixed(2)}</span>
     </section>
   );
 }
